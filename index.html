@@ -18,6 +18,8 @@
     }
 
     .container {
+        width: 70%;
+        
         background-color: #fff;
         padding: 20px;
         border-radius: 10px;
@@ -67,7 +69,7 @@
 <body>
 
 <div class="container">
-    <h1>Business Calculator</h1>
+    <h1>Calculator Salariu Mediu intr-o companie</h1>
     <form id="calculator-form">
         <label for="cifra_afaceri">Cifra de afaceri (lei)</label>
         <input type="number" id="cifra_afaceri" required>
@@ -78,7 +80,7 @@
         <label for="nr_angajati">Nr. angajați</label>
         <input type="number" id="nr_angajati" required>
 
-        <button type="submit">Calculate</button>
+        <button type="submit">Calculeaza</button>
     </form>
 
     <div id="result"></div>
@@ -97,7 +99,7 @@
         const result = ((cifraAfaceri - profitNet) / nrAngajati / 12 * 0.6).toFixed(2);
 
         // Display the result
-        document.getElementById('result').textContent = `Estimated Tax: ${result} lei per month`;
+        document.getElementById('result').textContent = `Salariu mediu estimat: ${result} lei pe luna`;
     });
 </script>
 
