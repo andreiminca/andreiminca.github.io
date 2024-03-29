@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Calculator</title>
+<title>Calculator Salariu Mediu</title>
 <style>
     body {
         font-family: Arial, sans-serif;
@@ -84,7 +84,7 @@
 
 <div class="container">
     <div class="calculator">
-        <h1>Business Calculator</h1>
+        <h1>Calculator Salariu</h1>
         <form id="calculator-form">
             <label for="cifra_afaceri">Cifra de afaceri (lei)</label>
             <input type="number" id="cifra_afaceri" required>
@@ -95,7 +95,7 @@
             <label for="nr_angajati">Nr. angajați</label>
             <input type="number" id="nr_angajati" required>
 
-            <button type="submit">Calculate</button>
+            <button type="submit">Calculeaza</button>
         </form>
 
         <div id="result"></div>
@@ -120,7 +120,7 @@
         const result = ((cifraAfaceri - profitNet) / nrAngajati / 12 * 0.6).toFixed(2);
 
         // Display the result
-        document.getElementById('result').textContent = `Estimated Tax: ${result} lei per month`;
+        document.getElementById('result').textContent = `Salariu Estimat: ${result} lei pe luna`;
     });
 </script>
 
