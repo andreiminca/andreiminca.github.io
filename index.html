@@ -1,1 +1,110 @@
-hello world
+Certainly! Below is a simple HTML page that takes input for "Cifra de afaceri", "Profit net", and "Nr. angajați" and calculates the formula ((cifra_afaceri - profit_net) / nr_angajati / 12 * 0.6). I'll also add some basic styling to make it look cool:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculator</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        color: #555;
+    }
+
+    input[type="number"] {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+    #result {
+        margin-top: 15px;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Business Calculator</h1>
+    <form id="calculator-form">
+        <label for="cifra_afaceri">Cifra de afaceri (lei)</label>
+        <input type="number" id="cifra_afaceri" required>
+
+        <label for="profit_net">Profit net (lei)</label>
+        <input type="number" id="profit_net" required>
+
+        <label for="nr_angajati">Nr. angajați</label>
+        <input type="number" id="nr_angajati" required>
+
+        <button type="submit">Calculate</button>
+    </form>
+
+    <div id="result"></div>
+</div>
+
+<script>
+    document.getElementById('calculator-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // Get input values
+        const cifraAfaceri = parseFloat(document.getElementById('cifra_afaceri').value);
+        const profitNet = parseFloat(document.getElementById('profit_net').value);
+        const nrAngajati = parseFloat(document.getElementById('nr_angajati').value);
+
+        // Calculate the result
+        const result = ((cifraAfaceri - profitNet) / nrAngajati / 12 * 0.6).toFixed(2);
+
+        // Display the result
+        document.getElementById('result').textContent = `Estimated Tax: ${result} lei per month`;
+    });
+</script>
+
+</body>
+</html>
+```
+
+This HTML page creates a form where users can input the "Cifra de afaceri", "Profit net", and "Nr. angajați", and when they click the "Calculate" button, it computes the estimated tax based on the provided formula and displays the result below the form. The styling is kept minimalistic but pleasant to look at.
