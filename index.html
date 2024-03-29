@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,29 +10,15 @@
         background-color: #f2f2f2;
         margin: 0;
         padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
     }
 
     .container {
         background-color: #fff;
-        padding: 40px;
+        padding: 20px;
         border-radius: 10px;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-        width: 50%;
-        display: flex;
-    }
-
-    .calculator {
-        flex: 1;
-        margin-right: 20px;
-    }
-
-    .additional-text {
-        flex: 1;
-
+        max-width: 600px;
+        margin: 20px auto;
     }
 
     h1 {
@@ -78,32 +64,38 @@
         font-weight: bold;
         text-align: center;
     }
+
+    .additional-text {
+        margin-top: 20px;
+    }
+
+    .additional-text p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
 </style>
 </head>
 <body>
 
 <div class="container">
-    <div class="calculator">
-        <h1>Calculator Salariu</h1>
-        <form id="calculator-form">
-            <label for="cifra_afaceri">Cifra de afaceri (lei)</label>
-            <input type="number" id="cifra_afaceri" required>
+    <h1>Calculator Salariu Mediu</h1>
+    <form id="calculator-form">
+        <label for="cifra_afaceri">Cifra de afaceri (lei)</label>
+        <input type="number" id="cifra_afaceri" required>
 
-            <label for="profit_net">Profit net (lei)</label>
-            <input type="number" id="profit_net" required>
+        <label for="profit_net">Profit net (lei)</label>
+        <input type="number" id="profit_net" required>
 
-            <label for="nr_angajati">Nr. angajați</label>
-            <input type="number" id="nr_angajati" required>
+        <label for="nr_angajati">Nr. angajați</label>
+        <input type="number" id="nr_angajati" required>
 
-            <button type="submit">Calculeaza</button>
-        </form>
+        <button type="submit">Calculează</button>
+    </form>
 
-        <div id="result"></div>
-    </div>
+    <div id="result"></div>
 
     <div class="additional-text">
-        <p>Acest calculator se bazează pe faptul că majoritatea societăților cu răspundere limitată din România își desfășoară activitatea cu un model de afaceri simplificat, unde veniturile principale provin din salarii și alte surse de venituri limitate. În acest context, se estimează că cheltuielile sunt în principal legate de salarii, chirie, consumabile de birou și alte cheltuieli mici. Așadar, acest calcul se aplică în special pentru acele SRL-uri care nu au o complexitate financiară ridicată și care își desfășoară activitatea într-un cadru relativ simplu.
-</p>
+        <p>Acest calculator se bazează pe faptul că majoritatea societăților cu răspundere limitată din România își desfășoară activitatea cu un model de afaceri simplificat, unde veniturile principale provin din salarii și alte surse de venituri limitate. În acest context, se estimează că cheltuielile sunt în principal legate de salarii, chirie, consumabile de birou și alte cheltuieli mici. Așadar, acest calcul se aplică în special pentru acele SRL-uri care nu au o complexitate financiară ridicată și care își desfășoară activitatea într-un cadru relativ simplu.</p>
     </div>
 </div>
 
@@ -120,7 +112,7 @@
         const result = ((cifraAfaceri - profitNet) / nrAngajati / 12 * 0.6).toFixed(2);
 
         // Display the result
-        document.getElementById('result').textContent = `Salariu Estimat: ${result} lei  NET pe luna`;
+        document.getElementById('result').textContent = `Salariu Estimat: ${result} lei  NET pe lună`;
     });
 </script>
 
