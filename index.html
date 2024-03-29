@@ -110,9 +110,10 @@
 
         // Calculate the result
         const result = ((cifraAfaceri - profitNet) / nrAngajati / 12 * 0.6).toFixed(2);
-
+        const min = result * 0.5;
+        const max = result * 2;
         // Display the result
-        document.getElementById('result').textContent = `Salariu Estimat: ${result} lei  NET pe lună`;
+        document.getElementById('result').textContent = `Salariu Mediu Estimat: ${result} lei  NET pe lună, Firma plateste intre ${min} si ${max}, in functie de experienta. `;
     });
 </script>
 
