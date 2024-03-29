@@ -53,7 +53,21 @@
         cursor: pointer;
         font-size: 18px;
     }
-
+     table {
+        font-family: Arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+    
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+    }
+    
+    th {
+        background-color: #f2f2f2;
+    }
     button:hover {
         background-color: #45a049;
     }
@@ -98,6 +112,51 @@
         <p>Acest calculator se bazează pe faptul că majoritatea societăților cu răspundere limitată din România își desfășoară activitatea cu un model de afaceri simplificat, unde veniturile principale provin din salarii și alte surse de venituri limitate. În acest context, se estimează că cheltuielile sunt în principal legate de salarii, chirie, consumabile de birou și alte cheltuieli mici. Așadar, acest calcul se aplică în special pentru acele SRL-uri care nu au o complexitate financiară ridicată și care își desfășoară activitatea într-un cadru relativ simplu.</p>
     </div>
 </div>
+
+<table>
+  <tr>
+    <th>Firma</th>
+    <th>Salariu Mediu</th>
+    <th>Salariu Minim</th>
+    <th>Salariu Maxim</th>
+  </tr>
+  <tr>
+    <td>Luxoft</td>
+    <td>10905.00</td>
+    <td>5425.00</td>
+    <td>21811.00</td>
+  </tr>
+  <tr>
+    <td>Adobe</td>
+    <td>18581.61</td>
+    <td>9290.81</td>
+    <td>37163.22</td>
+  </tr>
+  <tr>
+    <td>Crowdstrike</td>
+    <td>20034.43</td>
+    <td>10017.22</td>
+    <td>40068.86</td>
+  </tr>
+  <tr>
+    <td>Avira</td>
+    <td>15696.63</td>
+    <td>7848.32</td>
+    <td>31393.26</td>
+  </tr>
+  <tr>
+    <td>SecureWorks</td>
+    <td>12775.11</td>
+    <td>6387.56</td>
+    <td>25550.22</td>
+  </tr>
+  <tr>
+    <td>Amazon</td>
+    <td>9316.83</td>
+    <td>4658.42</td>
+    <td>18633.66</td>
+  </tr>
+</table>
 
 <script>
     document.getElementById('calculator-form').addEventListener('submit', function(event) {
