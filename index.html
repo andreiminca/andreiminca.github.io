@@ -104,9 +104,9 @@
         event.preventDefault();
 
         // Get input values
-        const cifraAfaceri = parseFloat(document.getElementById('cifra_afaceri').value);
-        const profitNet = parseFloat(document.getElementById('profit_net').value);
-        const nrAngajati = parseFloat(document.getElementById('nr_angajati').value);
+        const cifraAfaceri = parseFloat(document.getElementById('cifra_afaceri').value.replace(" ", ""));
+        const profitNet = parseFloat(document.getElementById('profit_net').value.replace(" ", ""));
+        const nrAngajati = parseFloat(document.getElementById('nr_angajati').value.replace(" ", ""));
 
         // Calculate the result
         const result = ((cifraAfaceri - profitNet) / nrAngajati / 12 * 0.6).toFixed(2);
